@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RandomPhoto:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/RandomPhoto_jar</output-path>
+    <root id="archive" name="RandomPhoto.jar">
+      <element id="module-output" name="RandomPhoto" />
+      <element id="extracted-dir" path="D:/Downloads/httpcomponents-client-4.5.5-bin/httpcomponents-client-4.5.5/lib/httpcore-4.4.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Downloads/httpcomponents-client-4.5.5-bin/httpcomponents-client-4.5.5/lib/httpclient-4.5.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Downloads/httpcomponents-client-4.5.5-bin/httpcomponents-client-4.5.5/lib/httpmime-4.5.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Downloads/commons-logging-1.2-bin/commons-logging-1.2/commons-logging-1.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
