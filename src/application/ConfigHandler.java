@@ -14,23 +14,19 @@ public class ConfigHandler {
 
     public ConfigHandler(String fileName){
         prop = new Properties();
+        FileSystem.createNotExisting(fileName);
         configFile = new File(fileName);
-        try{
-            InputStream input = new FileInputStream(configFile);
+
+        try (InputStream input = new FileInputStream(configFile.getAbsolutePath())) {
             prop.load(input);
-        } catch (FileNotFoundException exc){
-            createConfigFile(fileName);
         } catch (IOException exc){
             exc.printStackTrace();
         }
+
     }
 
     public String getDirectoryProperty(){
         return prop.getProperty("directory");
-    }
-
-    private void createConfigFile(String fileName){
-        FileSystem.createNotExisting(fileName);
     }
 
     /*
@@ -41,7 +37,7 @@ public class ConfigHandler {
     public void writeProperty(String property, String value){
         OutputStream output = null;
         try {
-            output = new FileOutputStream(configFile);
+            output = new FileOutputStream(configFile.getAbsolutePath());
             prop.setProperty(property, value);
             prop.store(output, null);
         } catch (IOException e) {

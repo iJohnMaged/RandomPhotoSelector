@@ -6,6 +6,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/*
+ * This program implements an application that selects and open a random photo from a given directory.
+ * Also allows you to do reverse image search by Google.
+ */
+
 public class Main extends Application {
 
     @Override

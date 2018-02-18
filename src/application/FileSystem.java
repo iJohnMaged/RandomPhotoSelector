@@ -40,11 +40,12 @@ public class FileSystem {
     public static void createNotExisting(String fileRelativePath) {
 
         try {
+
             Path currentRelativePath = Paths.get("");
             File file = new File(currentRelativePath.toAbsolutePath().toString() + File.separator + fileRelativePath);
 
             if (!file.exists()) {
-                file.mkdirs();
+                file.getParentFile().mkdirs();
                 file.createNewFile();
             }
 
